@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Userinput</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" 
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h1>Hello User, please enter your details in the below inputs. </h1>
+        <form method="post">
+            {% csrf_token %}
+            <label for="nameid">Enter your name :</label>
+            <input type="text" name="n" required id="nameid"><br>
+            <label for="emailid">Enter your email ID :</label>
+            <input type="email" name="e" id="emailid" required><br>
+            <label for="mobileid">Enter your mobile no :</label>
+            <input type="number" name="m" id="mobileid" pattern="[6-9][0-9]{9}"  required><br>
+            <button>Submit</button>
+        </form>
+        <a href="userslist"><button>Go to list of users</button></a>
+    </div>
+</body>
+</html>
